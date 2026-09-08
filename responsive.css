@@ -1,0 +1,502 @@
+/* =========================================================
+   TRIP PRICE - RESPONSIVE STYLESHEET
+   File: frontend/css/responsive.css
+
+   Purpose:
+   - Mobile-first responsive enhancements
+   - Tablet layouts
+   - Desktop layouts
+   - Large-screen refinements
+
+   Main styles and design tokens are defined in:
+   frontend/css/style.css
+
+   This file intentionally uses the exact class names
+   established in the existing project stylesheet.
+========================================================= */
+
+
+/* =========================================================
+   1. SMALL MOBILE DEVICES
+   480px and above
+========================================================= */
+
+@media (min-width: 480px) {
+    :root {
+        --container-padding: 1.25rem;
+    }
+
+
+    .trip-calculator-card {
+        padding: var(--space-6);
+    }
+
+
+    .transport-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .popular-routes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   2. TABLETS
+   640px and above
+========================================================= */
+
+@media (min-width: 640px) {
+    :root {
+        --container-padding: 1.5rem;
+    }
+
+
+    .section {
+        padding-block: var(--space-20);
+    }
+
+
+    .hero-section {
+        padding-block:
+            var(--space-16)
+            var(--space-20);
+    }
+
+
+    .hero-trust-list {
+        gap:
+            var(--space-3)
+            var(--space-6);
+    }
+
+
+    .form-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .popular-routes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .steps-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+    .guides-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .footer-grid {
+        grid-template-columns:
+            minmax(0, 1.5fr)
+            repeat(2, minmax(0, 1fr);
+    }
+
+
+    .footer-bottom {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1.5fr);
+
+        align-items: center;
+    }
+
+
+    .footer-disclaimer {
+        text-align: right;
+        justify-self: end;
+    }
+}
+
+
+/* =========================================================
+   3. TABLET / SMALL LAPTOP
+   768px and above
+========================================================= */
+
+@media (min-width: 768px) {
+    :root {
+        --container-padding: 2rem;
+    }
+
+
+    .header-container {
+        min-height: 4.75rem;
+    }
+
+
+    .main-navigation {
+        top: 4.75rem;
+    }
+
+
+    .hero-container {
+        align-items: center;
+    }
+
+
+    .trip-calculator-card {
+        padding: var(--space-8);
+    }
+
+
+    .transport-options {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+    .cost-preview-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: center;
+    }
+
+
+    .benefits-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+    .section-heading-with-action {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+
+    .section-heading-with-action .section-heading {
+        margin-bottom: 0;
+    }
+
+
+    .faq-container {
+        grid-template-columns:
+            minmax(0, 0.8fr)
+            minmax(0, 1.2fr);
+
+        align-items: start;
+    }
+
+
+    .faq-introduction {
+        position: sticky;
+        top: 6.5rem;
+    }
+
+
+    .footer-grid {
+        grid-template-columns:
+            minmax(0, 1.5fr)
+            repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   4. DESKTOP
+   1024px and above
+========================================================= */
+
+@media (min-width: 1024px) {
+    :root {
+        --container-padding: 2.5rem;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER AND DESKTOP NAVIGATION
+    ----------------------------------------------------- */
+
+    .mobile-menu-button {
+        display: none;
+    }
+
+
+    .main-navigation {
+        position: static;
+
+        display: block;
+
+        padding: 0;
+
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+
+
+    .navigation-list {
+        display: flex;
+        align-items: center;
+        gap: var(--space-1);
+    }
+
+
+    .navigation-link {
+        padding:
+            var(--space-2)
+            var(--space-3);
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
+
+    .hero-section {
+        padding-block:
+            var(--space-20)
+            var(--space-20);
+    }
+
+
+    .hero-container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(22rem, 0.85fr);
+
+        gap: var(--space-12);
+    }
+
+
+    .hero-description {
+        max-width: 40rem;
+        font-size: var(--font-size-lg);
+    }
+
+
+    /* -----------------------------------------------------
+       CALCULATOR
+    ----------------------------------------------------- */
+
+    .trip-calculator-card {
+        padding: var(--space-8);
+    }
+
+
+    .transport-options {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTENT GRIDS
+    ----------------------------------------------------- */
+
+    .popular-routes-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+    .guides-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+    .benefits-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+
+    /* -----------------------------------------------------
+       COST PREVIEW
+    ----------------------------------------------------- */
+
+    .cost-preview-container {
+        gap: var(--space-12);
+    }
+
+
+    .budget-preview {
+        padding: var(--space-6);
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
+
+    .footer-grid {
+        gap: var(--space-10);
+    }
+}
+
+
+/* =========================================================
+   5. LARGE DESKTOP
+   1200px and above
+========================================================= */
+
+@media (min-width: 1200px) {
+    .hero-container {
+        gap: var(--space-16);
+    }
+
+
+    .popular-routes-grid {
+        gap: var(--space-5);
+    }
+
+
+    .steps-grid {
+        gap: var(--space-6);
+    }
+
+
+    .guides-grid {
+        gap: var(--space-6);
+    }
+
+
+    .benefits-grid {
+        gap: var(--space-5);
+    }
+
+
+    .trip-calculator-card {
+        padding: var(--space-10);
+    }
+}
+
+
+/* =========================================================
+   6. LARGE / WIDE SCREENS
+   1440px and above
+========================================================= */
+
+@media (min-width: 1440px) {
+    :root {
+        --container-width: 1280px;
+    }
+
+
+    .hero-container {
+        grid-template-columns:
+            minmax(0, 1.1fr)
+            minmax(24rem, 0.8fr);
+    }
+}
+
+
+/* =========================================================
+   7. SHORT VIEWPORTS
+
+   Prevents the sticky header/navigation from consuming
+   unnecessary space on landscape mobile devices.
+========================================================= */
+
+@media (max-height: 500px) and (max-width: 1023px) {
+    .main-navigation {
+        max-height: calc(100vh - 4.25rem);
+        overflow-y: auto;
+    }
+
+
+    .navigation-list {
+        gap: 0;
+    }
+
+
+    .navigation-link {
+        padding-block: var(--space-2);
+    }
+}
+
+
+/* =========================================================
+   8. TOUCH DEVICES
+
+   Improves interaction for devices without hover capability.
+========================================================= */
+
+@media (hover: none) {
+    .primary-button:hover,
+    .secondary-button:hover,
+    .route-card:hover,
+    .benefit-card:hover,
+    .guide-card:hover {
+        transform: none;
+    }
+
+
+    .primary-button:hover {
+        background: var(--color-primary);
+    }
+
+
+    .secondary-button:hover {
+        border-color: var(--color-border-strong);
+        color: var(--color-text);
+    }
+
+
+    .route-card:hover,
+    .benefit-card:hover {
+        border-color: var(--color-border);
+    }
+
+
+    .guide-card:hover {
+        box-shadow: var(--shadow-xs);
+    }
+}
+
+
+/* =========================================================
+   9. HIGH-RESOLUTION / TEXT SCALING SAFETY
+
+   Prevent horizontal overflow when users increase browser
+   font sizes or device text scaling.
+========================================================= */
+
+@media (max-width: 479px) {
+    .header-actions {
+        gap: var(--space-1);
+    }
+
+
+    .theme-toggle,
+    .mobile-menu-button {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+
+    .site-logo {
+        font-size: var(--font-size-base);
+    }
+
+
+    .site-logo-icon {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+
+    .hero-trust-list {
+        display: grid;
+        gap: var(--space-2);
+    }
+
+
+    .budget-preview-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .budget-preview-status {
+        text-align: left;
+    }
+}
